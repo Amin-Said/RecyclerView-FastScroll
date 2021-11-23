@@ -111,8 +111,8 @@ public class FastScroller {
         mRecyclerView = recyclerView;
         mPopup = new FastScrollPopup(resources, recyclerView);
 
-        mThumbHeight = Utils.toPixels(resources, 52);
-        mThumbWidth = Utils.toPixels(resources, 8);
+        mThumbHeight = Utils.toPixels(resources, 58);
+        mThumbWidth = Utils.toPixels(resources, 4);
         mTrackWidth = Utils.toPixels(resources, 6);
 
         mTouchInset = Utils.toPixels(resources, -24);
@@ -450,5 +450,13 @@ public class FastScroller {
     @Deprecated
     public void setThumbInactiveColor(boolean thumbInactiveColor) {
         enableThumbInactiveColor(thumbInactiveColor);
+    }
+
+    public void setThumbWidth(int width) {
+        mThumbWidth = width;
+    }
+
+    public void setThumbHeight(int height) {
+        mThumbHeight = height;
     }
 }
